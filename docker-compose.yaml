@@ -1,0 +1,16 @@
+services:
+  
+  arcane-agent:
+    image: ghcr.io/ofkm/arcane-agent:latest
+    container_name: arcane-agent
+    restart: unless-stopped
+    environment:
+      - ARCANE_HOST=your-server.com
+      - ARCANE_PORT=3000
+      - TLS_ENABLED=false
+      - HEARTBEAT_RATE=30s
+      - RECONNECT_DELAY=5s
+      - COMPOSE_BASE_PATH=/data/compose-projects
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./compose-projects:/data/compose-projects
