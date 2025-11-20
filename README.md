@@ -1,3 +1,3 @@
 # Arcane-agent
 
-Modificar ARCANE_HOST
+Modificar AGENT_BOOTSTRAP_TOKEN
